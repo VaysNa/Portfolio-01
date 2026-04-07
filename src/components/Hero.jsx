@@ -114,8 +114,27 @@ const Hero = ({ hasAnimated }) => {
               </a>
             ))}
           </div>
-
-          {}
+          {/* Social Links */}
+          <div className="flex justify-center space-x-6 mb-8 animate-fade-in-up delay-400">
+            {heroData.socialLinks.map((social, index) => {
+              const IconComponent =
+                social.icon === "Github"
+                  ? Github
+                  : social.icon === "Linkedin"
+                    ? Linkedin
+                    : Mail;
+              return (
+                <a
+                  key={index}
+                  href={social.url}
+                  className="group p-3 bg-white rounded-full shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-110
+                      hover:-translate-y-1"
+                >
+                  <IconComponent className="w-6 h-6 text-gray-700 group-hover:text-black transition-colors" />
+                </a>
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>
