@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { AArrowDown, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 import { heroData } from "../data/hero";
 
 const Hero = ({ hasAnimated }) => {
@@ -149,8 +149,20 @@ const Hero = ({ hasAnimated }) => {
           </div>
 
           {/* Scroll indicator*/}
+          <div className="animate-bounce">
+            <button
+              onClick={scrollToAbout}
+              className="group flex flex-col items-center text-gray-600 hover:text-black transition-colors cursor-pointer"
+            >
+              <span className="text-sm mb-2">Learn More</span>
+              <ArrowDown className="w-6 h-6 group-hover:transform group-hover:translate-y-1 transition-transform" />
+            </button>
+          </div>
         </div>
       </div>
+      {/* Floating elements */}
+      <div className="absolute top-20 left-10 w-4 h-4 bg-blue-400 rounded-full opacity-60 animate-float"></div>
+      <div className="absoulute top-40 right-20 w-6 h-6 bg-purple-400 rounded-full opacity-60 animate-float delay-1000 "></div>
     </section>
   );
 };
