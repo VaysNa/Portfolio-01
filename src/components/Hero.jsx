@@ -71,7 +71,7 @@ const Hero = ({ hasAnimated }) => {
           </div>
 
           {/*Name */}
-          <h1 className="text-5xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-black via-gray-800 to-gray-600 bg-clip-text text-transparent animate-fade-in-up">
+          <h1 className="text-5xl md:text-7xl leading-tight font-bold mb-4 bg-gradient-to-r from-black via-gray-800 to-gray-600 bg-clip-text text-transparent animate-fade-in-up">
             {heroData.name}
           </h1>
 
@@ -160,9 +160,11 @@ const Hero = ({ hasAnimated }) => {
           </div>
         </div>
       </div>
-      {/* Floating elements */}
+      {/* Floating elements yang bulat2 warna warni  */}
       <div className="absolute top-20 left-10 w-4 h-4 bg-blue-400 rounded-full opacity-60 animate-float"></div>
-      <div className="absoulute top-40 right-20 w-6 h-6 bg-purple-400 rounded-full opacity-60 animate-float delay-1000 "></div>
+      <div className="absolute top-40 right-20 w-6 h-6 bg-purple-400 rounded-full opacity-60 animate-float delay-1000 "></div>
+      <div className="absolute bottom-40 left-20 w-3 h-3 bg-green-400 rounded-full opacity-60 animate-float delay-2000"></div>
+      <div className="absolute bottom-20 right-10 w-5 h-5  bg-orange-400 rounded-full opacity-60 animate-float delay-3000"></div>
     </section>
   );
 };
